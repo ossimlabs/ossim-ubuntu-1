@@ -50,6 +50,8 @@ export CMAKE_BUILD_TYPE=Release
 export BUILD_OPENCV_PLUGIN=OFF
 export OSSIM_MAKE_JOBS=12
 export USE_OSSIM_JSONCPP=ON
+export BUILD_OSSIM_QT4=ON
+
 $OSSIM_DEV_HOME/ossim/scripts/build.sh
 
 make install
