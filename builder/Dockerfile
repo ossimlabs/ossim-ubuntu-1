@@ -1,3 +1,4 @@
+
 FROM ubuntu:18.04
 
 WORKDIR /work
@@ -21,13 +22,11 @@ COPY ./ossim-oms/ /work/ossim-oms/
 COPY ./ossim-plugins/ /work/ossim-plugins/
 COPY ./ossim-video/ /work/ossim-video/
 COPY ./ossim-private/ /work/ossim-private/
-COPY ./ossim-qt4/ /work/ossim-qt4/
-
 # COPY  ./apache-groovy-binary-3.0.5.zip /work
 
 RUN apt update -y \
     && apt install -y cmake git vim g++ libgeos-dev libgeotiff-dev libcurl4-openssl-dev ffmpeg libavcodec-dev \
-    libavformat-dev  libavdevice-dev libgdal-dev  openjdk-11-jdk qt4-dev-tools \
+    libavformat-dev  libavdevice-dev libgdal-dev  openjdk-11-jdk \
     && ./build-kakadu.sh \
     && ./build-ossim.sh \
     # && ./build-joms.sh \
