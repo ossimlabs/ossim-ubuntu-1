@@ -14,9 +14,10 @@ ENV OSSIM_INSTALL_PREFIX=/usr/local \
     OSSIM_VERSION_TAG=RELEASE 
 
 RUN apt update -y \
-    && apt install -y libgeotiff2 gdal-bin curl ffmpeg libqtgui4  libqt4-qt3support \
+    && apt install -y libgeotiff2 gdal-bin curl ffmpeg libqtgui4 libqt4-qt3support \
     && echo ""
 
 COPY --from=builder /usr/local /usr/local
+
 
 CMD bash

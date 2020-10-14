@@ -25,8 +25,8 @@ COPY ./ossim-private/ /work/ossim-private/
 # COPY  ./apache-groovy-binary-3.0.5.zip /work
 
 RUN apt update -y \
-    && apt install -y cmake git vim g++ libgeos-dev libgeotiff-dev libcurl4-openssl-dev ffmpeg libavcodec-dev \
-    libavformat-dev  libavdevice-dev libgdal-dev  openjdk-11-jdk \
+    && apt install -y cmake git vim g++ libcurl4-openssl-dev ffmpeg libavcodec-dev \
+    libavformat-dev  libavdevice-dev libgdal-dev  openjdk-11-jdk libgeos-dev libgeotiff-dev \
     && ./build-kakadu.sh \
     && ./build-ossim.sh \
     # && ./build-joms.sh \

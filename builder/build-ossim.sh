@@ -56,6 +56,7 @@ $OSSIM_DEV_HOME/ossim/scripts/build.sh
 
 make install
 
+
 #strip $OSSIM_INSTALL_PREFIX/bin/*
 #strip $OSSIM_INSTALL_PREFIX/lib64/*
 #strip $OSSIM_INSTALL_PREFIX/lib64/ossim/plugins/*
